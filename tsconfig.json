@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true, // Enables compatibility with ES modules
+    "target": "ES2021",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": true, // Speeds up subsequent builds
+    "skipLibCheck": true, // Avoids type-checking declaration files for libraries
+    "strict": true, // Enables all strict type-checking options
+    "strictNullChecks": false, // Retained based on your preference
+    "noImplicitAny": false, // Retained based on your preference
+    "strictBindCallApply": false, // Retained based on your preference
+    "forceConsistentCasingInFileNames": true, // Enforces consistent file casing
+    "noFallthroughCasesInSwitch": true, // Prevents accidental fallthrough in switch statements
+    "resolveJsonModule": true, // Allows importing JSON files
+    "moduleResolution": "node", // Resolves modules in the Node.js style
+    "typeRoots": ["./node_modules/@types"], // Specifies where TypeScript looks for type definitions
+    "paths": {
+      "@/*": ["src/*"] // Adds support for path aliases
+    }
+  },
+  "include": ["src/**/*"], // Includes all files in the `src` directory
+  "exclude": ["node_modules", "dist", "test"], // Excludes unnecessary directories
+  "ts-node": {
+    "files": true // Allows TypeScript files to be run directly in development
+  }
+}
